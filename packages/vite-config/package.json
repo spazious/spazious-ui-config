@@ -1,0 +1,58 @@
+{
+  "name": "@spazious/vite-config",
+  "version": "0.0.1",
+  "description": "Vite config for Spazious",
+  "type": "commonjs",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "yarn bundle --watch --sourcemap",
+    "build": "yarn bundle",
+    "bundle": "tsup-node src/index.ts --dts --format cjs,esm ",
+    "test": "exit 0"
+  },
+  "keywords": [
+    "vite",
+    "config",
+    "frontend",
+    "react"
+  ],
+  "dependencies": {
+    "@vitejs/plugin-react-swc": "^3.2.0",
+    "dotenv": "^16.0.3",
+    "sass": "^1.60.0",
+    "vite": "^4.2.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-tsconfig-paths": "^4.0.7"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@types/node": "^18.15.7",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.2"
+  },
+  "peerDependencies": {
+    "@spazious/eslint-config": "^0.0.1"
+  },
+  "author": "Rubén López Gómez (http://rubeniskov.com) <ruben.lopez@spazious.com>",
+  "contributors": [
+    {
+      "name": "Rubén López Gómez",
+      "email": "ruben.lopez@spazious.com",
+      "url": "https://rubeniskov.com"
+    }
+  ],
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/spazious/spazious-ui-config/issues"
+  },
+  "homepage": "https://github.com/spazious/spazious-ui-config/packages/vite-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spazious/spazious-ui-config.git"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@spazious/storybook-config",
+  "version": "0.0.1",
+  "description": "Storybook for Spazious",
+  "bin": {
+    "spz-storybook-config": "./install.js"
+  },
+  "dependencies": {
+    "@storybook/addon-actions": "^7.0.0-rc.7",
+    "@storybook/addon-essentials": "^7.0.0-rc.7",
+    "@storybook/addon-interactions": "^7.0.0-rc.7",
+    "@storybook/addon-links": "^7.0.0-rc.7",
+    "@storybook/addon-mdx-gfm": "^7.0.0-rc.7",
+    "@storybook/blocks": "^7.0.0-rc.7",
+    "@storybook/react": "^7.0.0-rc.7",
+    "@storybook/react-vite": "^7.0.0-rc.7",
+    "@storybook/testing-library": "^0.0.14-next.1",
+    "storybook": "^7.0.0-rc.7",
+    "edit-json-file": "^1.7.0",
+    "mkdirp": "^2.1.6"
+  },
+  "peerDependencies": {
+    "@spazious/vite-config": "^0.0.1"
+  },
+  "author": "Rubén López Gómez (http://rubeniskov.com) <ruben.lopez@spazious.com>",
+  "contributors": [
+    {
+      "name": "Rubén López Gómez",
+      "email": "ruben.lopez@spazious.com",
+      "url": "https://rubeniskov.com"
+    }
+  ],
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/spazious/spazious-ui-config/issues"
+  },
+  "homepage": "https://github.com/spazious/spazious-ui-config/packages/storybook-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spazious/spazious-ui-config.git"
+  }
+}

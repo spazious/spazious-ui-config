@@ -1,0 +1,34 @@
+{
+  "name": "@spazious/prettier-config",
+  "version": "0.0.1",
+  "bin": {
+    "spz-prettier-config": "./install.js"
+  },
+  "main": "index.json",
+  "keywords": [
+    "prettier",
+    "prettier-config"
+  ],
+  "dependencies": {
+    "mkdirp": "^2.1.6",
+    "prettier": "^2.8.7",
+    "symlink-dir": "^5.1.1"
+  },
+  "author": "Rubén López Gómez (http://rubeniskov.com) <ruben.lopez@spazious.com>",
+  "contributors": [
+    {
+      "name": "Rubén López Gómez",
+      "email": "ruben.lopez@spazious.com",
+      "url": "https://rubeniskov.com"
+    }
+  ],
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/spazious/spazious-ui-config/issues"
+  },
+  "homepage": "https://github.com/spazious/spazious-ui-config/packages/prettier-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spazious/spazious-ui-config.git"
+  }
+}

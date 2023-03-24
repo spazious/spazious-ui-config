@@ -1,0 +1,39 @@
+{
+  "name": "@spazious/ts-config",
+  "version": "0.0.1",
+  "description": "A TypeScript configurations for spazious projects",
+  "main": "node.json",
+  "bin": {
+    "spz-ts-config": "./install.js"
+  },
+  "exports": {
+    "./node.json": "./node.json",
+    "./react.json": "./react.json",
+    "./react-app.json": "./react-app.json",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "edit-json-file": "^1.7.0",
+    "typescript": "^5.0.3"
+  },
+  "author": "Rubén López Gómez (http://rubeniskov.com) <ruben.lopez@spazious.com>",
+  "contributors": [
+    {
+      "name": "Rubén López Gómez",
+      "email": "ruben.lopez@spazious.com",
+      "url": "https://rubeniskov.com"
+    }
+  ],
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/spazious/spazious-ui-config/issues"
+  },
+  "homepage": "https://github.com/spazious/spazious-ui-config/packages/ts-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spazious/spazious-ui-config.git"
+  }
+}
