@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const editJsonFile = require("edit-json-file");
-const symlinkDir = require("symlink-dir");
 const mkdirp = require("mkdirp");
 const { resolve } = require("path");
 
@@ -18,30 +17,40 @@ file.save();
 
 console.log("- package.json updated");
 
-console.log("Installing storybook config");
-
 mkdirp.sync(resolve(".storybook"));
 
-symlinkDir(resolve(__dirname, "main.ts"), resolve(".storybook", "main.ts"))
-  .then(() => {
-    console.log("- main.ts linked");
-  })
-  .catch((err) => console.error(err));
+if (!fs.existsSync(resolve(".storybook", "main.ts"))) {
+  console.log("Adding main.ts...");
+  try {
+    fs.copyFileSync(
+      resolve(__dirname, "main.ts"),
+      resolve(".storybook", "main.ts")
+    );
+  } catch (ex) {
+    console.error("Error:", err);
+  }
+}
 
-symlinkDir(
-  resolve(__dirname, "preview.ts"),
-  resolve(".storybook", "preview.ts")
-)
-  .then(() => {
-    console.log("- preview.ts linked");
-  })
-  .catch((err) => console.error(err));
+if (!fs.existsSync(resolve(".storybook", "preview.ts"))) {
+  console.log("Adding preview.ts...");
+  try {
+    fs.copyFileSync(
+      resolve(__dirname, "preview.ts"),
+      resolve(".storybook", "preview.ts")
+    );
+  } catch (ex) {
+    console.error("Error:", err);
+  }
+}
 
-symlinkDir(
-  resolve(__dirname, "preview-head.html"),
-  resolve(".storybook", "preview-head.html")
-)
-  .then(() => {
-    console.log("- preview-head.html linked");
-  })
-  .catch((err) => console.error(err));
+if (!fs.existsSync(resolve(".storybook", "preview-head.html"))) {
+  console.log("Adding preview-head.html...");
+  try {
+    fs.copyFileSync(
+      resolve(__dirname, "preview-head.html"),
+      resolve(".storybook", "preview-head.html")
+    );
+  } catch (ex) {
+    console.error("Error:", err);
+  }
+}
