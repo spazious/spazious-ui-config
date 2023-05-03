@@ -1,6 +1,6 @@
 {
   "name": "@spazious/storybook-config",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Storybook for Spazious",
   "bin": {
     "spz-storybook-config": "./install.js"
