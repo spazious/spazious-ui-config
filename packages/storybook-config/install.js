@@ -2,6 +2,7 @@
 
 const editJsonFile = require("edit-json-file");
 const mkdirp = require("mkdirp");
+const fs = require("fs");
 const { resolve } = require("path");
 
 console.log("Setting up storybook scripts");
