@@ -32,12 +32,12 @@ if (!fs.existsSync(resolve(".storybook", "main.ts"))) {
   }
 }
 
-if (!fs.existsSync(resolve(".storybook", "preview.ts"))) {
+if (!fs.existsSync(resolve(".storybook", "preview.tsx"))) {
   console.log("Adding preview.ts...");
   try {
     fs.copyFileSync(
-      resolve(__dirname, "preview.ts"),
-      resolve(".storybook", "preview.ts")
+      resolve(__dirname, "preview.tsx"),
+      resolve(".storybook", "preview.tsx")
     );
   } catch (ex) {
     console.error("Error:", ex);
