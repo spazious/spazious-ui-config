@@ -28,7 +28,7 @@ if (!fs.existsSync(resolve(".storybook", "main.ts"))) {
       resolve(".storybook", "main.ts")
     );
   } catch (ex) {
-    console.error("Error:", err);
+    console.error("Error:", ex);
   }
 }
 
@@ -40,7 +40,7 @@ if (!fs.existsSync(resolve(".storybook", "preview.ts"))) {
       resolve(".storybook", "preview.ts")
     );
   } catch (ex) {
-    console.error("Error:", err);
+    console.error("Error:", ex);
   }
 }
 
@@ -52,6 +52,6 @@ if (!fs.existsSync(resolve(".storybook", "preview-head.html"))) {
       resolve(".storybook", "preview-head.html")
     );
   } catch (ex) {
-    console.error("Error:", err);
+    console.error("Error:", ex);
   }
 }
