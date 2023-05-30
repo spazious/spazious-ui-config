@@ -1,0 +1,42 @@
+{
+  "name": "@spazious/config-types",
+  "description": "Spazious UI config types",
+  "version": "0.1.4",
+  "engines": {
+    "node": ">=16.18.0"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": {
+        "default": "./src/index.d.ts"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "prepare": "spz-config install",
+    "dev": "yarn build --watch --sourcemap",
+    "build": "tsup-node src/index.ts --dts --format cjs,esm",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rubén López Gómez (http://rubeniskov.com) <ruben.lopez@spazious.com>",
+  "contributors": [
+    {
+      "name": "Rubén López Gómez",
+      "email": "ruben.lopez@spazious.com",
+      "url": "https://rubeniskov.com"
+    }
+  ],
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/spazious/spazious-ui-config/issues"
+  },
+  "homepage": "https://github.com/spazious/spazious-ui-config/packages/config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spazious/spazious-ui-config.git"
+  }
+}
