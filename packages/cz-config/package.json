@@ -1,30 +1,25 @@
 {
-  "name": "@spazious/ts-config",
+  "name": "@spazious/cz-config",
   "version": "0.0.1",
-  "description": "A TypeScript configurations for spazious projects",
+  "description": "Spazious UI commitizen config for conventional commits",
   "main": "node.json",
   "bin": {
-    "spz-ts-config": "./bin/cli.js"
-  },
-  "exports": {
-    "./node.json": "./node.json",
-    "./react.json": "./react.json",
-    "./react-app.json": "./react-app.json",
-    "./package.json": "./package.json"
+    "spz-cz-config": "./bin/cli.js"
   },
   "scripts": {
     "prepare": "spz-config install",
-    "dev": "yarn build --watch --sourcemap",
+    "dev": "yarn bundle --watch --sourcemap",
     "build": "tsup-node src/index.ts --dts --format cjs,esm",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@spazious/config-utils": "^0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "typescript": "^5.0.3"
   },
   "devDependencies": {
-    "@spazious/config-types": "^0",
-    "@types/node": "^16.11.7"
+    "@spazious/config-types": "^0"
   },
   "author": "Rubén López Gómez (http://rubeniskov.com) <ruben.lopez@spazious.com>",
   "contributors": [

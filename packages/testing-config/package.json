@@ -1,7 +1,21 @@
 {
-  "name": "@spazious/config",
-  "description": "Spazious UI config package for all projects",
+  "name": "@spazious/testing-config",
+  "description": "Spazious UI config for testing sources",
   "version": "0.1.4",
+  "main": "./dist/index.js",
+  "engines": {
+    "node": ">=16.18.0"
+  },
+  "scripts": {
+    "dev": "yarn bundle --watch --sourcemap",
+    "build": "yarn bundle",
+    "bundle": "tsup-node src/index.ts --dts --format cjs,esm",
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "edit-json-file": "^1.7.0",
+    "yargs": "^17.7.2"
+  },
   "author": "Rubén López Gómez (http://rubeniskov.com) <ruben.lopez@spazious.com>",
   "contributors": [
     {
@@ -18,28 +32,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/spazious/spazious-ui-config.git"
-  },
-  "engines": {
-    "node": ">=16.18.0"
-  },
-  "bin": {
-    "spz-config": "./bin/cli.js"
-  },
-  "scripts": {
-    "prepare": "spz-config install",
-    "build": "tsup-node src/index.ts --dts --format cjs,esm"
-  },
-  "dependencies": {
-    "@spazious/eslint-config": "^0",
-    "@spazious/prettier-config": "^0",
-    "@spazious/storybook-config": "^0",
-    "@spazious/ts-config": "^0",
-    "@spazious/vite-config": "^0",
-    "@spazious/config-utils": "^0",
-    "@spazious/config-types": "^0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.0",
-    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "@schemastore/package": "^0.0.8",
