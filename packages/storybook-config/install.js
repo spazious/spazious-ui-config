@@ -2,6 +2,7 @@
 
 const editJsonFile = require("edit-json-file");
 const mkdirp = require("mkdirp");
+const fs = require("fs");
 const { resolve } = require("path");
 
 console.log("Setting up storybook scripts");
@@ -27,19 +28,19 @@ if (!fs.existsSync(resolve(".storybook", "main.ts"))) {
       resolve(".storybook", "main.ts")
     );
   } catch (ex) {
-    console.error("Error:", err);
+    console.error("Error:", ex);
   }
 }
 
-if (!fs.existsSync(resolve(".storybook", "preview.ts"))) {
+if (!fs.existsSync(resolve(".storybook", "preview.tsx"))) {
   console.log("Adding preview.ts...");
   try {
     fs.copyFileSync(
-      resolve(__dirname, "preview.ts"),
-      resolve(".storybook", "preview.ts")
+      resolve(__dirname, "preview.tsx"),
+      resolve(".storybook", "preview.tsx")
     );
   } catch (ex) {
-    console.error("Error:", err);
+    console.error("Error:", ex);
   }
 }
 
@@ -51,6 +52,6 @@ if (!fs.existsSync(resolve(".storybook", "preview-head.html"))) {
       resolve(".storybook", "preview-head.html")
     );
   } catch (ex) {
-    console.error("Error:", err);
+    console.error("Error:", ex);
   }
 }

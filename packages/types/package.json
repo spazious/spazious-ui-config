@@ -1,15 +1,19 @@
 {
-  "name": "@spazious/ts-config",
-  "version": "0.0.1",
-  "description": "A TypeScript configurations for spazious projects",
-  "main": "node.json",
-  "bin": {
-    "spz-ts-config": "./bin/cli.js"
+  "name": "@spazious/config-types",
+  "description": "Spazious UI config types",
+  "version": "0.1.4",
+  "engines": {
+    "node": ">=16.18.0"
   },
+  "main": "./index.js",
   "exports": {
-    "./node.json": "./node.json",
-    "./react.json": "./react.json",
-    "./react-app.json": "./react-app.json",
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": {
+        "default": "./src/index.d.ts"
+      }
+    },
     "./package.json": "./package.json"
   },
   "scripts": {
@@ -17,14 +21,6 @@
     "dev": "yarn build --watch --sourcemap",
     "build": "tsup-node src/index.ts --dts --format cjs,esm",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "@spazious/config-utils": "^0",
-    "typescript": "^5.0.3"
-  },
-  "devDependencies": {
-    "@spazious/config-types": "^0",
-    "@types/node": "^16.11.7"
   },
   "author": "Rubén López Gómez (http://rubeniskov.com) <ruben.lopez@spazious.com>",
   "contributors": [
@@ -38,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/spazious/spazious-ui-config/issues"
   },
-  "homepage": "https://github.com/spazious/spazious-ui-config/packages/ts-config",
+  "homepage": "https://github.com/spazious/spazious-ui-config/packages/config",
   "repository": {
     "type": "git",
     "url": "https://github.com/spazious/spazious-ui-config.git"

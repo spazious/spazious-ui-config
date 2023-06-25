@@ -1,0 +1,48 @@
+{
+  "name": "@spazious/config-utils",
+  "description": "Spazious UI config utilities",
+  "version": "0.1.4",
+  "main": "./dist/index.js",
+  "engines": {
+    "node": ">=16.18.0"
+  },
+  "scripts": {
+    "prepare": "spz-config install",
+    "dev": "yarn bundle --watch --sourcemap",
+    "build": "tsup-node src/index.ts --dts --format cjs,esm",
+    "test": "exit 0",
+    "format": "prettier --write src",
+    "lint": "eslint --cache \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "eslint --cache --fix \"src/**/*.{js,jsx,ts,tsx}\""
+  },
+  "dependencies": {
+    "debug": "^4.3.4",
+    "edit-json-file": "^1.7.0",
+    "resolve-bin": "^1.0.1",
+    "yargs": "^17.7.2"
+  },
+  "author": "Rubén López Gómez (http://rubeniskov.com) <ruben.lopez@spazious.com>",
+  "contributors": [
+    {
+      "name": "Rubén López Gómez",
+      "email": "ruben.lopez@spazious.com",
+      "url": "https://rubeniskov.com"
+    }
+  ],
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/spazious/spazious-ui-config/issues"
+  },
+  "homepage": "https://github.com/spazious/spazious-ui-config/packages/config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spazious/spazious-ui-config.git"
+  },
+  "devDependencies": {
+    "@schemastore/package": "^0.0.8",
+    "@spazious/config": "^0",
+    "@types/edit-json-file": "^1.7.0",
+    "@types/node": "^20.2.5",
+    "@types/resolve-bin": "^0.4.1"
+  }
+}
